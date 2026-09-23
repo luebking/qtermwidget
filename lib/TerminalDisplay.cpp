@@ -3217,6 +3217,7 @@ void TerminalDisplay::bracketText(QString& text) const
 {
     if (bracketedPasteMode() && !_disabledBracketedPasteMode)
     {
+        text.replace(QLatin1String("\033[201~"), QLatin1String("\\033[201~"));
         text.prepend(QLatin1String("\033[200~"));
         text.append(QLatin1String("\033[201~"));
     }
