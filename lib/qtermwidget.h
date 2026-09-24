@@ -331,7 +331,7 @@ public slots:
     void zoomOut();
 
     // Set size
-    void setSize(const QSize &);
+    virtual void setSize(const QSize &);
 
     /*! Set named key binding for given widget
      */
